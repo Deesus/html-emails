@@ -2,13 +2,22 @@
 
 ### General:
 
+#### Compatibility Issues:
+- HTML/CSS standards are inconsistently supported across email clients.
+- All email clients strip away all JavaScript from emails (this is for security reasons).
 - Even if a particular CSS property is not supported by all clients, you still may want to use it nonetheless. You would, therefore, make the best-looking UI for email clients that support that CSS and fallback for those that don't.
+
+#### Development Strategy:
+- Because email CSS support is poor, you cannot rely on advanced, and in many cases, even basic CSS attributes.
+- Use HTML tables, not divs (divs are not reliable).
 
 ### Debugging:
 - Generated emails have an `.eml` file extension. Rename the `.eml` file to `.mht` (which is a web page archive format). Now you can open the email/file in Firefox and use Dev Tools to inspect the content.
 
 
 ### Outlook/MS Mail/IE Gotchas:
+
+- `width` and `height` attributes are not supported by MS email clients.
 
 - GMail on IE doesn't accept padding on `<table>` elements; use padding on `<td>` instead.
 
