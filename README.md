@@ -4,16 +4,16 @@
 
 #### Compatibility Issues:
 - HTML/CSS standards are inconsistently supported across email clients.
-	- Clients will strip certain elements from your emails -- e.g.`<head>` tags and a myriad of CSS attributes.
+- Clients will strip certain elements from your emails -- e.g.`<head>` tags and a myriad of CSS attributes.
 - All email clients strip away all JavaScript from emails (this is for security reasons).
-- One must also take into consideration the various combination that affects emails:
+- Factors that affect HTML email UI are multivariable:
 	1. the device (iPhone 6, iPhone 4, desktop, etc.)
 	2. the email client (Gmail, Outlook, Thunderbird, Gmail app for Android, etc.)
 	3. if accessing the email via web browser, then the specific browser (Firefox, Chrome, Edge, IE, etc.)
 	3. the specific version of said client (Outlook 2016, Outlook 2013)
 	4. the OS that the email is being accessed from (Windows 7, Windows 10, MacOS)
 	
-	Therefore, an email on Gmail app for iPhone 6 have idiosyncrasies indiscernible on other combinations of OS/client/device.
+	Therefore, an email on Gmail app for iPhone 6 has idiosyncrasies indiscernible on another combinatinon.
 
 #### Development Strategy:
 - Because email CSS support is poor, you cannot rely on advanced, and in many cases, even basic CSS attributes.
