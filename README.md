@@ -21,7 +21,8 @@
 - Even if a particular CSS property is not supported by all clients, you still may want to use it nonetheless. Perhaps you'd want to create the best-looking UI for your target email clients (which support that specific CSS property) and create fallback UI for the less-important email clients (those that don't support specific property).
 
 ### Debugging:
-- Generated emails have an `.eml` file extension. Rename the `.eml` file to `.mht` (which is a web page archive format). Now you can open the email/file in Firefox and use Dev Tools to inspect the content.
+- Generated emails have an `.eml` file extension. Rename the `.eml` file to `.mht` (which is a web page archive format). Now you can open the email/file in Firefox and use DevTools to inspect the content.
+	- If will not be able to access DevTools if you are converting your emails to base64 encoding (e.g. for multipart emails); you will need to temporarily comment out the server-side logic does this extraneous encoding.
 - Use an email testing service.
 
 ### Outlook/MS Mail/IE Gotchas:
