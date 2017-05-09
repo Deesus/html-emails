@@ -13,7 +13,7 @@
 	3. the specific version of said client (Outlook 2016, Outlook 2013)
 	4. the OS that the email is being accessed from (Windows 7, Windows 10, MacOS)
 	
-	Therefore, an email on Gmail app for iPhone 6 has idiosyncrasies indiscernible on another combinatinon.
+	Therefore, an email on Gmail app for iPhone 6 has idiosyncrasies indiscernible on another combination.
 
 #### Development Strategy:
 - Because email CSS support is poor, you cannot rely on advanced, and in many cases, even basic CSS attributes.
@@ -23,7 +23,13 @@
 ### Debugging:
 - Generated emails have an `.eml` file extension. Rename the `.eml` file to `.mht` (which is a web page archive format). Now you can open the email/file in Firefox and use DevTools to inspect the content.
 	- If will not be able to access DevTools if you are converting your emails to base64 encoding (e.g. for multipart emails); you will need to temporarily comment out the server-side logic does this extraneous encoding.
-- Use an email testing service.
+- You can test `.eml` files on different browsers and use DevTools another way: 
+	1. Set up a desktop email client (e.g. Thunderbird) and connect to a browser-based account (e.g. Gmail). 
+	2. Place the `.eml` file in your inbox. In Thunderbird, you would drag the file to the inbox.
+	3. Open the browser you want to test the `.eml` file and log in to your account. You should see your `.eml` email in your inbox (in your browser)----if not, refresh your inbox.
+	4. You now open that email and open up DevTools to inspect and debug.
+	
+- Use an email testing service. They allow you to test every combination of email/device/OS/client. These services charge monthly subscription fees, but will save you a lot of hassle, headache, time, and money. 
 
 ### Outlook/MS Mail/IE Gotchas:
 
