@@ -49,6 +49,8 @@
 ```
 In the above code, we have a component `<table>` contained inside the `<td>` and subsequently, the container aligns/floats its contents to the right.
 
+- In Outlook/MS Mail/Gmail on IE, padding doesn't work on the `<table>` element. Instead, apply padding to the `<td>` element.
+
 ### Blue links and underlining for dates, telephone #s, and addresses:
 - Mobile devices/clients detect address, phone, and date text and automatically highlight them as clickable links. This often overrides the carefully branded colors or causes readability issues.
 - To prevent this from happening on mobile clients (especially on iOs), wrap the text inside an anchor tag `<a href="#">` and add override the font `color` and `text-decoration`:
