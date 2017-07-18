@@ -47,7 +47,7 @@
 MS-based email clients tend to be most problematic for developers. In order to adequately support these email clients,  it becomes necessary to use MS-specific markup:
 ```html
   <!--[if mso]>
-	<!-- ms-specific markup -->
+	MS-SPECIFIC MARKUP
   <![endif]-->
 ```
 Markup inside the `<!--[if mso]><![endif]-->` tag is rendered by MS clients (on other clients, it is seen as comments). We can thus add MS-only elements in our email, but since we typically want to make our emails consistent across clients and browsers, we would wrap the "_if mso_" tags around existing elements in our email, altering it in some way.
@@ -58,21 +58,25 @@ Here are a few _mso_ recepies:
 ```html
 <table width="100%" cellpadding="0" cellspacing="0">
   <tr>
-	<td>
+    <td>
 	
 	  <!--[if mso]>
-		<table width="70" cellpadding="0" cellspacing="0">
-		  <tr>
-			<td style="border-style: solid; border-width: 5px 20px; text-align: center; background-color: #4cb53c; border-color: #4cb53c;">
-	  <![endif]-->
-	  <a href="#" class="btn btn-primary">Yes</a>
-	  <!--[if mso]>
-			</td>
-		  </tr>
-		</table>
-	  <![endif]-->
-	  
-	</td>
+        <table width="70" cellpadding="0" cellspacing="0">
+          <tr>
+            <td style="border-style: solid; 
+                             border-width: 5px 20px; 
+                             text-align: center;
+                             background-color: #4cb53c; 
+                             border-color: #4cb53c;">
+      <![endif]-->
+      <a href="#" class="btn btn-primary">Yes</a>
+      <!--[if mso]>
+            </td>
+          </tr>
+        </table>
+      <![endif]-->
+
+    </td>
   </tr>
 </table>
 ```
@@ -93,15 +97,15 @@ Here are a few _mso_ recepies:
 <!--[if mso]>
 <center>
 <table>
-	<tr>
-		<td width="600">
+  <tr>
+    <td width="600">
 <![endif]-->
 
-	<!-- EMAIL CONTENT GOES HERE -->
+  EMAIL CONTENT
 
 <!--[if mso]>
-		</td>
-	</tr>
+    </td>
+  </tr>
 </table>
 </center>
 <![endif]-->
@@ -118,7 +122,9 @@ Here are a few _mso_ recepies:
 <tr>
   <td align="right"> 
     <table class="component" width="65px" cellpadding="0" cellspacing="0">
-	  ....
+
+      ...
+
     </table>
   </td>
 </tr>
