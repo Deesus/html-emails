@@ -59,8 +59,8 @@ Here are a few _mso_ recepies:
 <table width="100%" cellpadding="0" cellspacing="0">
   <tr>
     <td>
-	
-	  <!--[if mso]>
+
+      <!--[if mso]>
         <table width="70" cellpadding="0" cellspacing="0">
           <tr>
             <td style="border-style: solid; 
@@ -69,7 +69,9 @@ Here are a few _mso_ recepies:
                              background-color: #4cb53c; 
                              border-color: #4cb53c;">
       <![endif]-->
-      <a href="#" class="btn btn-primary">Yes</a>
+
+	  <a href="#" class="btn btn-primary">Yes</a>
+
       <!--[if mso]>
             </td>
           </tr>
